@@ -1,41 +1,24 @@
 package ru.mirea.task1;
+
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        workWithArray();
+
+    }
+    public static void workWithArray(){
         Scanner in = new Scanner(System.in);
-        System.out.println("Задание 1\nВведите количество элементов массива ");
+        System.out.print("Задание 1\nКоличество элементов массива: ");
         int n = in.nextInt();
-        System.out.println("Введите вариант суммирования (1-for; 2-while; 3-do while)");
-        int var = in.nextInt();
-        int n2 = n;
         int[] arr = new int[n];
-        System.out.println("Введите элементы массива ");
-        for(int i = 0; i < n; i += 1){
-            arr[i]=in.nextInt();
-        }
         int sum = 0;
-        switch (var){
-            case 1:
-                for (int i = 0; i<n; i++){
-                    sum += arr[i];
-                }
-                break;
-            case 2:
-                while(n2>0){
-                    n2--;
-                    sum +=arr[n2];
-                }
-                break;
-            case 3:
-                do{
-                    n2--;
-                    sum +=arr[n2];
-                }while (n2>0);
-            default:
-                break;
+        System.out.print("Введите элементы массива: ");
+        for (int i = 0; i < n; i++) {
+            arr[i] = in.nextInt();
+            sum += arr[i];
         }
-        System.out.println(sum);
-        in.close();
+        float mean = sum / arr.length;
+        System.out.println("Сумма всех элементов: " + sum + "\nСреднее значение: " + mean);
     }
 }
