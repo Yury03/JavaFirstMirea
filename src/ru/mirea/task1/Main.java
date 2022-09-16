@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         workWithArray();
-
+//test
     }
     public static void workWithArray(){
         Scanner in = new Scanner(System.in);
